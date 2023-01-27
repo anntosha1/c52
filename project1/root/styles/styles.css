@@ -1,0 +1,278 @@
+/*Basic styles*/
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+.wrapper {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0;
+
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 30px 10px #dbdbdb;
+            box-shadow: 0 0 30px 10px #dbdbdb;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+/*Header settings*/
+.header {
+    padding-bottom: 30px;
+    background: rgb(175,122,197);
+    background: linear-gradient(180deg, rgba(175,122,197,1) 20%, rgba(255,255,255,1) 100%);
+}
+
+.header h1 {
+    font-size: 24px;
+
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav a {
+    color: #ffffff;
+}
+
+.nav a:hover,
+.nav a:focus {
+    color: #633974;
+}
+
+.menu {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.my_photo {
+    text-align: center;
+}
+
+.my_photo img {
+    margin-top: 7px;
+    width: 160px;
+    height: auto;
+    border-radius: 50%;
+    filter: saturate(0.9);
+}
+
+.my_photo img {
+    animation-name: come;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+ 
+@keyframes come {
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px) rotate(-360deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+} 
+
+/*Main settings*/
+.main {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.about,
+.fun-facts,
+.video,
+.learned {
+    text-align: justify;
+}
+
+.learned {
+    padding-bottom: 60px;
+}
+
+.video frame {
+    width: auto;
+    height: auto;
+}
+
+/*Footer settings*/
+.links {
+    display: flex;
+
+    padding-left: 20px;
+}
+
+.links li {
+    padding-right: 20px;
+}
+
+.links li:hover {
+    opacity: 0.5;
+}
+
+.connect {
+    padding-top: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgb(175,122,197);
+    background: linear-gradient(360deg, rgba(175,122,197,1) 20%, rgba(255,255,255,1) 100%);
+}
+
+/*Top button*/
+.top {
+    position: fixed;
+    bottom: 5px;
+    left: 75%;
+    z-index: 1;
+    left: calc(50% + 105px);
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .wrapper {
+        width: 768px;
+    }
+
+    .header {
+        padding-bottom: 40px;
+    }
+
+    .header h1 {
+        padding-top: 25px;
+    }
+
+    .nav {
+        width: 720px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    
+        font-size: 1.1rem;
+    } 
+
+    .menu {
+        padding-top: 42px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu li {
+        padding-left: 20px;
+
+        font-size: 1rem;
+    }
+
+    .my_photo img {
+        margin-top: 7px;
+        width: 280px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .main {
+        width: 720px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .video iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    .top {
+        left: calc(50% + 325px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        width: 1200px;
+    }
+
+    .header {
+        padding-bottom: 60px;
+    }
+
+    .nav {
+        width: 960px;
+
+        font-size: 1.1rem;
+    } 
+
+    .my_photo {
+        background-image: url("../images/code.png");
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
+    }
+
+    .main {
+        width: 960px;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+
+    .fun-facts {
+        padding-top: 50px;
+    }
+    
+    .video {
+        padding-top: 50px;
+    }
+
+    .learned {
+        padding-top: 50px;
+    }
+
+    .top {
+        left: calc(50% + 530px);
+    }
+}
